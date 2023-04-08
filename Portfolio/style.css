@@ -1,0 +1,556 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap');
+
+
+main div {
+    /*border: 1px solid limegreen;*/
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    color: #34495E;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+
+.unselectable {
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+header {
+    position: relative;
+}
+
+#main-nav {
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 2em;
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    align-items: center;
+
+}
+
+#main-nav .logo {
+    font-weight: 600;
+    font-size: 1.5em;
+}
+
+.nav-links {
+    width: 400px;
+
+}
+
+.social {
+    /*width: 200px;*/
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+    font-size: 1.5em;
+    margin-top: 1em;
+}
+
+.social a {
+    color: #34495E;
+}
+
+
+
+#home .github:hover a {
+    color: #171515;
+}
+
+#home .linkedin:hover a {
+    color: #0072b1;
+}
+
+#home .twitter:hover a {
+    color: #1DA1F2;
+}
+
+#home .instagram:hover a {
+    color: d6249f;
+}
+
+#main-nav ul {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.3em;
+}
+
+#main-nav ul a {
+    color: #34495E;
+    position: relative;
+}
+
+#main-nav ul li a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    background-color: red;
+    opacity: 0;
+    transition: all ease .25s;
+}
+
+#main-nav ul li:hover a::before {
+    opacity: 1;
+}
+
+#main-nav ul li a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    background-color: red;
+    opacity: 0;
+}
+
+
+#main-nav ul li.active a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    background-color: red;
+    opacity: 1;
+}
+
+
+main .container {
+    height: 100vh;
+    display: flex;
+    width: 100%;
+}
+
+.container div {
+    width: 50%;
+
+}
+
+.text {
+    padding-left: 7em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 90vh
+}
+
+.text h3 {
+    font-weight: 400;
+    position: relative;
+    color: #34495E;
+    z-index: -1;
+}
+
+.text h3::after {
+    content: "";
+    width: 20px;
+    height: 2px;
+    background-color: red;
+    position: absolute;
+    bottom: 2px;
+}
+
+.text>h1 {
+    font-size: 4em;
+}
+
+.text .typed-text {
+    display: flex;
+    margin-bottom: 1em;
+    color: #34495E;
+}
+
+.text .typed-text span {
+    color: #000;
+}
+
+
+.typed-text h1:first-child {
+    margin-right: .5em;
+}
+
+.typed-cursor {
+    color: red;
+    font-weight: 100;
+}
+
+
+
+#work {
+    height: 100vh;
+}
+
+.email-container {
+    margin-top: 1em;
+}
+
+.email-container a {
+    display: flex;
+    color: #34495E;
+}
+
+.email-container p {
+    /*font-family: 'Consolas', sans-serif ;*/
+}
+
+.email-container svg {
+    width: 18px;
+    margin-left: 1em;
+}
+
+.email-container:hover a,
+.email-container:hover #Layer_1 {
+    color: #000;
+    fill: #000;
+}
+
+#home .typed-cursor {
+    color: red;
+    font-weight: 100;
+}
+
+.image img {
+    width: 600px;
+    margin-top: 1em;
+}
+
+.download-btn {
+    margin-top: 2em;
+    display: inline;
+
+}
+
+.download-btn a {
+    z-index: 5;
+    display: flex;
+    align-items: center;
+}
+
+.download-btn button {
+    padding: .5em 1em;
+    border: 1px solid #34495E;
+    border-radius: .9em;
+    outline: none;
+    background-color: #fff;
+    color: #34495E;
+    transition: background ease .25s;
+}
+
+.download-btn button:hover {
+    background-color: #34495E;
+    color: #fff;
+    cursor: pointer;
+}
+
+.image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.image img {
+    position: absolute;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+@media (max-width: 700px) {
+    #main-nav .nav-links {
+        display: none;
+    }
+
+
+    #secondary-nav {
+        display: flex;
+    }
+
+    #secondary-nav .nav-links {
+        display: flex;
+    }
+}
+
+
+
+
+
+@media (max-width: 520px) {
+
+    #main-nav .logo {
+        font-weight: 600;
+        font-size: 1em;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .container div {
+        width: 100%;
+    }
+
+    .text {
+        height: 40vh;
+        padding-left: 2em;
+        margin-top: 6em;
+    }
+
+    .text>h1 {
+        font-size: 2em;
+    }
+
+    .text .typed-text h1 {
+        font-size: 1.5em;
+
+    }
+
+    .text .typed-text {
+        /*flex-direction: column;*/
+    }
+
+    #main-nav .nav-links {
+        display: none;
+    }
+
+    #name {
+        margin: .2em 0;
+    }
+
+
+    .email-container {
+        margin-top: 2em;
+    }
+
+    .image {
+        text-align: center;
+        height: 30vh;
+    }
+
+    .image img {
+        width: 300px;
+    }
+
+    .social {
+        margin-top: 2em;
+    }
+
+}
+
+
+/* Animation */
+
+.greet {
+    animation: slidDown 1.5s ease forwards
+}
+
+.name {
+    animation: slidRight 1.5s ease forwards;
+}
+
+.profession {
+    animation: slidLeft 1.5s ease forwards;
+}
+
+.email-container {
+    animation: slidDown 1.5s ease forwards;
+}
+
+.github,
+.linkedin,
+.twitter,
+.instagram,
+.download-btn {
+    opacity: 0;
+}
+
+
+.github {
+    animation: slidLeft 1.5s 1s ease forwards;
+}
+
+.linkedin {
+    animation: slidLeft 1.5s 1.2s ease forwards;
+
+}
+
+.twitter {
+    animation: slidLeft 1.5s 1.4s ease forwards;
+
+}
+
+.instagram {
+    animation: slidLeft 1.5s 1.6s ease forwards;
+
+}
+
+
+.download-btn {
+    animation: slidUp 1.5s 1.8s ease forwards;
+}
+
+@keyframes slidUp {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY();
+        opacity: 1;
+    }
+}
+
+@keyframes slidRight {
+    0% {
+        transform: translateX(-30px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX();
+        opacity: 1;
+    }
+}
+
+@keyframes slidLeft {
+    0% {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX();
+        opacity: 1;
+    }
+}
+
+@keyframes slidDown {
+    0% {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY();
+        opacity: 1;
+    }
+}
+
+
+/* snackbar */
+#snackbar {
+    visibility: hidden;
+    min-width: 50px;
+    /* Set a default minimum width */
+    margin-left: -125px;
+    /* Divide value of min-width by 2 */
+    background-color: #333;
+    /* Black background color */
+    color: #fff;
+    /* White text color */
+    text-align: center;
+    /* Centered text */
+    border-radius: 2px;
+    /* Rounded borders */
+    padding: 16px;
+    /* Padding */
+    position: fixed;
+    /* Sit on top of the screen */
+    z-index: 1;
+    /* Add a z-index if needed */
+    left: 50%;
+    /* Center the snackbar */
+    bottom: 30px;
+    /* 30px from the bottom */
+    opacity: .9;
+}
+
+#snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 30px;
+        opacity: .9;
+    }
+}
+
+@keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 30px;
+        opacity: .9;
+    }
+}
+
+@-webkit-keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: .9;
+    }
+
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: .9;
+    }
+
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
